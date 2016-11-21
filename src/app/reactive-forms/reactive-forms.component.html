@@ -1,0 +1,27 @@
+<h2>ReactiveFormsModule</h2>
+<md-card>
+  <md-card-title>
+    Registration form
+  </md-card-title>
+  <form  novalidate [formGroup]="form">
+    <input formControlName="first" placeholder="First name">
+    <input formControlName="last" placeholder="Last name">
+    <input *ngIf="flag" formControlName="test1" placeholder="test1 name">
+    <input *ngIf="flag" formControlName="test2" placeholder="test2 name">
+    <div formGroupName="account">
+      <label>Account</label>
+      <input formControlName="username" placeholder="Username">
+      <input formControlName="password" placeholder="Password">
+      <input formControlName="confirm" placeholder="Confirm password">
+    </div>
+    <md-card-actions align="end">
+      <button md-button>SUBMIT</button>
+    </md-card-actions>
+  </form>
+</md-card>
+<md-card>
+  <p>Form: {{ form.value | json }}</p>
+  <p>Form status: {{ form.status }}</p>
+  <p>Account status: {{ form.get('account').errors | json }}</p>
+</md-card>
+<button (click)="clicked()">enable</button>

@@ -1,0 +1,12 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+    "workbench.editor.openPositioning": "left",
+    "files.autoSave": "afterDelay",
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/app/**/*.spec.ts": true
+    }
+,
+"typescript.check.workspaceVersion": false
+}
