@@ -1,1 +1,1 @@
-Just trying out template forms, reactive forms and dynamic forms via ng2-dynamic-forms
+Just trying out template forms, reactive forms and dynamic forms via ng2-dynamic-forms.
