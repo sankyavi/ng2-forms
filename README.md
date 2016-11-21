@@ -1,3 +1,1 @@
-This is the repo for the live demo of Angular forms at Angular Connect 2016.
-
-It's not accepting PRs or issues at this time. Thanks!
+Just trying out template forms, reactive forms and dynamic forms via ng2-dynamic-forms
