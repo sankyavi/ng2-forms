@@ -1,5 +1,11 @@
 import { Component }       from '@angular/core';
 import { QuestionService } from './question.service';
+/**
+ * 
+ * 
+ * @export
+ * @class AppComponent
+ */
 @Component({
   selector: 'app-root',
   template: `

@@ -5,7 +5,9 @@
     "files.exclude": {
         "**/.git": true,
         "**/.svn": true,
-        "**/app/**/*.spec.ts": true
+        "**/app/**/*.spec.ts": true,
+        "e2e": true,
+        "node_modules": true
     }
 ,
 "typescript.check.workspaceVersion": false
