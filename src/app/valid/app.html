@@ -2,37 +2,37 @@
 
 
 <form #demoForm="ngForm" novalidate>
-  <h4>rangeLength</h4>
-  <input type="text" ngModel name="username" #username="ngModel" [rangeLength]="[5, 9]"/>
-  <p *ngIf="username?.errors?.rangeLength">rangeLength error</p>
+    <h4>rangeLength</h4>
+    <input type="text" ngModel name="username" #username="ngModel" [rangeLength]="[5, 9]" />
+    <p *ngIf="username?.errors?.rangeLength">rangeLength error</p>
 
-  <h4>min</h4>
-  <input type="text" ngModel name="min" #min="ngModel" [min]="num"/>
-  <p *ngIf="min?.errors?.min">min error</p>
+    <h4>min</h4>
+    <input type="text" ngModel name="min" #min="ngModel" [min]="num" />
+    <p *ngIf="min?.errors?.min">min error</p>
 
-  <h4>max</h4>
-  <input type="text" ngModel name="max" #max="ngModel" [max]="num"/>
-  <p *ngIf="max?.errors?.max">max error</p>
+    <h4>max</h4>
+    <input type="text" ngModel name="max" #max="ngModel" [max]="num" />
+    <p *ngIf="max?.errors?.max">max error</p>
 
-  <button (click)="num = 6">click {{num}}</button>
 
-  <h4>range</h4>
-  <input type="text" ngModel name="range" #range="ngModel" [range]="[5, 9]"/>
-  <p *ngIf="range?.errors?.range">range error</p>
+    <h4>range</h4>
+    <input type="text" ngModel name="range" #range="ngModel" [range]="[5, 9]" />
+    <p *ngIf="range?.errors?.range">range error</p>
 
-  <h4>creditCard</h4>
-  <input type="text" ngModel name="creditCard" #creditCard="ngModel" creditCard/>
-  <p *ngIf="creditCard?.errors?.creditCard">creditCard error</p>
+    <h4>creditCard</h4>
+    <input type="text" ngModel name="creditCard" #creditCard="ngModel" creditCard/>
+    <p *ngIf="creditCard?.errors?.creditCard">creditCard error</p>
 
-  <h4>JSON</h4>
-  <input type="text" ngModel name="json" #json="ngModel" json/>
-  <p *ngIf="json?.errors?.json">JSON error</p>
+    <h4>JSON</h4>
+    <input type="text" ngModel name="json" #json="ngModel" json/>
+    <p *ngIf="json?.errors?.json">JSON error</p>
 
-  <h4>base64</h4>
-  <input type="text" ngModel name="base" #base="ngModel" base64/>
-  <p *ngIf="base?.errors?.base64">base64 error</p>
+    <h4>base64</h4>
+    <input type="text" ngModel name="base" #base="ngModel" base64/>
+    <p *ngIf="base?.errors?.base64">base64 error</p>
 
-  <h4>phone</h4>
-  <p>Indian number are <em>NOT</em> supported<p>
-  <input type="text" ngModel name="phone" #phone="ngModel" [phone]="'en-US'"/>
-  <p *ngIf="phone?.errors?.phone">phone error</p>
+    <h4>phone</h4>
+    <p>Indian number are <em>NOT</em> supported
+        <p>
+            <input type="text" ngModel name="phone" #phone="ngModel" [phone]="'en-US'" />
+            <p *ngIf="phone?.errors?.phone">phone error</p>
