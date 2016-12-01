@@ -8,6 +8,7 @@ import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 import { DynamicFormsCoreModule } from '@ng2-dynamic-forms/core';
 import { DynamicFormsBootstrapUIModule } from '@ng2-dynamic-forms/ui-bootstrap';
+import { CustomFormsModule } from 'ng2-validation';
 
 
 // our app imports
@@ -33,7 +34,8 @@ import { DynamicFormsComponent } from './dynamic-forms/dynamic-form.component';
     HttpModule,
     MaterialModule.forRoot(),
     DynamicFormsCoreModule.forRoot(),
-    DynamicFormsBootstrapUIModule
+    DynamicFormsBootstrapUIModule,
+    CustomFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
