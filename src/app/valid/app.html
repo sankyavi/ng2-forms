@@ -1,3 +1,6 @@
+<h2>Demo for ng2-validation</h2>
+
+
 <form #demoForm="ngForm" novalidate>
   <h4>rangeLength</h4>
   <input type="text" ngModel name="username" #username="ngModel" [rangeLength]="[5, 9]"/>
@@ -10,14 +13,6 @@
   <h4>max</h4>
   <input type="text" ngModel name="max" #max="ngModel" [max]="num"/>
   <p *ngIf="max?.errors?.max">max error</p>
-
-  <h4>equal to "xxx"</h4>
-  <input type="text" ngModel name="equal" #equal="ngModel" [equal]="'' + num"/>
-  <p *ngIf="equal?.errors?.equal">equal error</p>
-
-  <h4>minDate</h4>
-  <input type="text" ngModel name="minDate" #minDate="ngModel" minDate="2016-09-09"/>
-  <p *ngIf="minDate?.errors?.minDate">minDate error</p>
 
   <button (click)="num = 6">click {{num}}</button>
 
@@ -38,28 +33,6 @@
   <p *ngIf="base?.errors?.base64">base64 error</p>
 
   <h4>phone</h4>
-  <input type="text" ngModel name="phone" #phone="ngModel" [phone]="'zh-CN'"/>
+  <p>Indian number are <em>NOT</em> supported<p>
+  <input type="text" ngModel name="phone" #phone="ngModel" [phone]="'en-US'"/>
   <p *ngIf="phone?.errors?.phone">phone error</p>
-
-  <h4>UUID</h4>
-  <input type="text" ngModel name="uuid" #uuid="ngModel" [uuid]="4"/>
-  <p *ngIf="uuid?.errors?.uuid">UUID error</p>
-
-  <h4>equal to "xxx"</h4>
-  <input type="text" ngModel name="equal" #equal="ngModel" [equal]="'xxx'"/>
-  <p *ngIf="equal?.errors?.equal">equal error</p>
-
-  <h4>equalTo to password</h4>
-  <input type="password" ngModel name="password" #password="ngModel" required/>
-  <p *ngIf="password?.errors?.required">required error</p>
-  <input type="password" ngModel name="certainPassword" #certainPassword="ngModel" [equalTo]="password"/>
-  <p *ngIf="certainPassword?.errors?.equalTo">equalTo error</p>
-
-</form>
-
-<form [formGroup]="form">
-<input type="password" formControlName="password"/>
-<p *ngIf="form.controls.password.errors?.required">required error</p>
-<input type="password" formControlName="certainPassword"/>
-<p *ngIf="form.controls.certainPassword.errors?.equalTo">equalTo error</p>
-</form>
